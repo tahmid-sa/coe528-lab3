@@ -1,0 +1,23 @@
+//Requires: <The parameters declared, arrays int a[] and int b[] will need to be initialized and filled with appropriate values of integers>
+//Modifies: <The values passed to this function will be modified as such: The elements of int array a[] will be modified. The maximum value of array int a[] will be replaced with that of the maximum value of array int b[]>
+//Effects:  <The maximum value of array int a[] will be placed into integer maxOfA and the index of that maximum value will be placed in integer index. The maximum of array int b[] will then be placed into integer maxOfB and lastly, the maximum value of a[] will be replaced with the maximum value of b[], the integer maxofB>
+
+public static void substituteMax(int[] a, int[] b) {
+	int maxOfA = a[0];
+	int index = 0;
+
+	for (int i = 0; i < a.length; i++) {
+		if(a[i] > maxOfA) {
+			maxOfA = a[i];
+			index = i;
+		}
+	}
+
+	int maxOfB = b[0];
+	for (int i = 0; i < b.length; i++) {
+		if(b[i] > maxOfB) {
+			maxOfB = b[i];
+		}
+	}
+	a[index] = maxOfB;
+}
